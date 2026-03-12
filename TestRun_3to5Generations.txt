@@ -1,0 +1,136 @@
+﻿**********************************************************************
+** Visual Studio 2026 Developer PowerShell v18.1.1
+** Copyright (c) 2025 Microsoft Corporation
+**********************************************************************
+PS C:\devl\T200B\Life> cd C:\devl\T200B\Life\bin\Release
+PS C:\devl\T200B\Life\bin\Release> Start-Transcript -Path .\TestRun_3to5Generations.txt
+Transcript started, output file is .\TestRun_3to5Generations.txt
+PS C:\devl\T200B\Life\bin\Release> .\GLife.exe
+
+******************************************************************************************************************
+Game of Life
+The Game of Life program assignment follows the material from Chapters 7 and 8 in your book.
+There are 2 major focus points for this lab exercise:
+
+2 dimensional arrays - This is our first data structure that moves beyond a simple linear
+list of values.We will expand this and also look at some of the built in collections in the C# FCL.
+
+--nested for loops(2 loops, an inner loop and an outer loop) - A natural fit for processing data
+from a 2 dimensional array, since the data structure is logically similar to a spreadsheet or
+matrix consisting of rows and columns of storage cells.
+
+The Game of Life is a computational phenomenon invented by British mathematician
+John Conway circa 1970 to show possibilities of population simulations in a mathematically
+controlled environment.The original computations were not executed on machines, they were performed
+using marbles on a game board similar to Go. The results of processing were determined using pencil
+                and paper from one generation to the next.
+
+Recently, according to the Wikipedia page on Game of Life, a researcher has carried out a
+GOL simulation to the 6,366,548,773,467,669,985,195,496,000th(6 octillionth) generation of a
+Turing machine, computed in less than 30 seconds on an Intel Core Duo 2 GHz CPU.
+
+The standard Game of Life is symbolized as B3 / S23.A cell is Born if it has exactly three neighbors,
+Survives if it has two or three living neighbors, and dies otherwise.
+
+The first number, or list of numbers, is what is required for a dead cell to be born.
+The second set is the requirement for a live cell to survive to the next generation.
+
+The deliverables for this assignment: the Life.zip - the complete zip file of your development tree.
+Your zip file should include a plain text file showing your testing of the running program for 3 to 5
+generations of output using the standard input file start state that we developed together in class (shown below).
+The Powershell transcript feature is strongly recommended for doing the testing - or copy and paste to notepad
+if your powershell setup doesn't allow use of the transcript.
+
+Make sure to read the rubric covering the requirements for full credit on the assignment.
+
+The common start state we develop together in class:
+----------------------------------------------------
+xxxxxxxx xxxxx   xxx      xxxxxxx xxxxx
+----------------------------------------------------
+This is a single row comprised of the following sequence of cells:
+8 LIVE - 1 DEAD - 5 LIVE - 3 DEAD - 3 LIVE - 6 DEAD - 7 LIVE - 1 DEAD - 5 LIVE
+How many generations do you want to simulate (3-5)?
+3
+GENERATION: 1
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                           @@@@@@@@ @@@@@   @@@      @@@@@@@ @@@@@                                            |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+
+GENERATION: 2
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                            @@@@@@   @@@     @        @@@@@   @@@                                             |
+|                            @@@@@@   @@@     @        @@@@@   @@@                                             |
+|                            @@@@@@   @@@     @        @@@@@   @@@                                             |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+
+GENERATION: 3
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                             @@@@     @                @@@     @                                              |
+|                            @    @   @ @              @   @   @ @                                             |
+|                           @      @ @   @   @@@      @     @ @   @                                            |
+|                            @    @   @ @              @   @   @ @                                             |
+|                             @@@@     @                @@@     @                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+|                                                                                                              |
+
+PS C:\devl\T200B\Life\bin\Release> Stop-Transcript
+Transcript stopped, output file is C:\devl\T200B\Life\bin\Release\TestRun_3to5Generations.txt
